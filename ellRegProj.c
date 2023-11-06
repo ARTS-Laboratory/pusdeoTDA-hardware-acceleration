@@ -3,11 +3,45 @@
 #include <math.h>
 
 #define N 8 // 8 data points
+int dataPoints[8][2];
 
-void calculateEllipse(int dataPoints[N][2], int n) {
+void calculateEllipse(int dataPoint[2], int addr, int n) {
     int dataHard[N][13] = {0};
     int outData[14] = {0};
-
+    switch(addr){
+        case 0:
+            dataPoints[0][0] = dataPoint[0];
+            dataPoints[0][1] = dataPoint[1];
+            break;
+        case 1:
+            dataPoints[1][0] = dataPoint[0];
+            dataPoints[1][1] = dataPoint[1];
+            break;
+        case 2:
+            dataPoints[2][0] = dataPoint[0];
+            dataPoints[2][1] = dataPoint[1];
+            break;
+        case 3:
+            dataPoints[3][0] = dataPoint[0];
+            dataPoints[3][1] = dataPoint[1];
+            break;
+        case 4:
+            dataPoints[4][0] = dataPoint[0];
+            dataPoints[4][1] = dataPoint[1];
+            break;
+        case 5:
+            dataPoints[5][0] = dataPoint[0];
+            dataPoints[5][1] = dataPoint[1];
+            break;
+        case 6:
+            dataPoints[6][0] = dataPoint[0];
+            dataPoints[6][1] = dataPoint[1];
+            break;
+        case 7:
+            dataPoints[7][0] = dataPoint[0];
+            dataPoints[7][1] = dataPoint[1];
+            break;
+    }
     for (int i = 0; i < N; i++) {
         dataHard[i][0] = dataPoints[i][0]; // x
         dataHard[i][1] = dataPoints[i][1]; // y
@@ -82,17 +116,9 @@ void calculateEllipse(int dataPoints[N][2], int n) {
 }
 
 int main() {
-    int dataPoints[N][2] = {
-        {0, -5},
-        {2, 0},
-        {-1, 0},
-        {0, 1},
-        {-3, -1},
-        {5, -2},
-        {0, 0},
-        {0, 0}
-    };
+    int dataPoint[2] = {0, -5};
+    int address = 0;
     int numberOfUsedPoints = 6;
-    calculateEllipse(dataPoints, numberOfPoints);
+    calculateEllipse(dataPoint, address, numberOfUsedPoints);
     return 0;
 }

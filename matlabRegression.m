@@ -11,7 +11,7 @@ dataPoints = [
     0, 0
 ];
 %number of points
-n = 6;
+n = 7;
 
 %Hardware Implemented
 dataHard = zeros(8, 13);
