@@ -105,14 +105,6 @@ void calculateEllipse(int dataPoint[2], int addr, int n) {
         }
         printf("\n");
     }
-
-    printf("Matrix after row reduction:\n");
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 6; j++) {
-            printf("%d ", matrix[i][j]);
-        }
-        printf("\n");
-    }
 }
 
 int main() {
