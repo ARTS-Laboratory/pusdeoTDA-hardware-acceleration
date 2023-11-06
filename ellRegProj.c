@@ -108,9 +108,23 @@ void calculateEllipse(int dataPoint[2], int addr, int n) {
 }
 
 int main() {
-    int dataPoint[2] = {0, -5};
-    int address = 0;
-    int numberOfUsedPoints = 6;
-    calculateEllipse(dataPoint, address, numberOfUsedPoints);
+    int readIn[9][2] = {
+    {0, 2},
+    {3, 0},
+    {-1, 2},
+    {-3, -2},
+    {0, -4},
+    {1, 1},
+    {-2, 3},
+    {0, -5},
+    {-4, 0}
+    };
+    int dataPoint[2];
+    int address;
+    int numberOfUsedPoints = 5;
+    for (int i = 0; i < sizeof(readIn)/sizeof(readIn[0]); ++i){
+        address = i % numberOfUsedPoints;
+        calculateEllipse(dataPoint, address, numberOfUsedPoints);
+    }
     return 0;
 }
