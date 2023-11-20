@@ -1,0 +1,60 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5554" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:10:40" msg_body="unexpected pragma parameter 'bundle'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INVALID" msg_id="207-5554" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:11:40" msg_body="unexpected pragma parameter 'bundle'">
+        <args ClangWarningOption="invalid-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/reconfig/xilinx_2022/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/reconfig/xilinx_2022/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/reconfig/xilinx_2022/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/share/jbakos/data/designs/ellipse_solver/ellipse_solver/solution1/csynth.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ellipse_solver" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="0" ARG_PragmaOptions="mode=bram bundle=dataPoints port=dataPoints" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="0" ARG_PragmaOptions="mode=bram bundle=matrix port=matrix" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=dataHard complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=dataHard complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=outData complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="ellipse_solver.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="ellipse_solver" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="ellipse_solver.cpp:39:20" msg_body="Loop 'inner_second_loop' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="inner_second_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="ellipse_solver.cpp:5:0" msg_body="Unrolling loop 'inner_second_loop' (ellipse_solver.cpp:39:20) in function 'ellipse_solver' completely with a factor of 8">
+        <args Factor="8" LoopLoc="ellipse_solver.cpp:39:20" LoopName="inner_second_loop"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ellipse_solver.cpp:13:13" msg_body="Applying array_partition to 'dataHard': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="dataHard"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="ellipse_solver.cpp:17:6" msg_body="Applying array_partition to 'outData': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="outData"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="ellipse_solver.cpp:5:0" msg_body="Aggregating bram variable 'matrix' with compact=bit mode in 32-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="32" HwTyName="bram" Name="matrix"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

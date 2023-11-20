@@ -1,0 +1,5 @@
+remark: ellipse_solver.cpp:39:20: Loop 'inner_second_loop' is marked as complete unroll implied by the pipeline pragma
+remark: ellipse_solver.cpp:5:0: Unrolling loop 'inner_second_loop' (ellipse_solver.cpp:39:20) in function 'ellipse_solver' completely with a factor of 8
+remark: ellipse_solver.cpp:13:13: Applying array_partition to 'dataHard': Complete partitioning on dimension 1. Complete partitioning on dimension 2.
+remark: ellipse_solver.cpp:17:6: Applying array_partition to 'outData': Complete partitioning on dimension 1.
+remark: ellipse_solver.cpp:5:0: Aggregating bram variable 'matrix' with compact=bit mode in 32-bits

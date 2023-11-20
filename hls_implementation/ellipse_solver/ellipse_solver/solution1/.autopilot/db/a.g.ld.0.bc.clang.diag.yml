@@ -1,0 +1,84 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ellipse_solver.cpp, Line: 39, Column: 20 }
+Function:        _Z14ellipse_solverP6ap_intILi64EEPA6_S_ILi32EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        inner_second_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ellipse_solver.cpp, Line: 5, Column: 0 }
+Function:        _Z14ellipse_solverP6ap_intILi64EEPA6_S_ILi32EE
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        inner_second_loop
+  - String:          ''' ('
+  - LoopLoc:         'ellipse_solver.cpp:39:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ellipse_solver
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ellipse_solver.cpp, Line: 13, Column: 13 }
+Function:        _Z14ellipse_solverP6ap_intILi64EEPA6_S_ILi32EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          dataHard
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ellipse_solver.cpp, Line: 17, Column: 6 }
+Function:        _Z14ellipse_solverP6ap_intILi64EEPA6_S_ILi32EE
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          outData
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ellipse_solver.cpp, Line: 5, Column: 0 }
+Function:        _Z14ellipse_solverP6ap_intILi64EEPA6_S_ILi32EE
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            matrix
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '32'
+  - String:          '-bits'
+...

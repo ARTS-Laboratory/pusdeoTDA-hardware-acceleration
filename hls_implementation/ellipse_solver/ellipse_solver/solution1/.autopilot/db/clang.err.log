@@ -1,0 +1,7 @@
+ellipse_solver.cpp:10:40: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode=bram bundle=dataPoints port=dataPoints
+                                       ^
+ellipse_solver.cpp:11:40: warning: unexpected pragma parameter 'bundle' [-Winvalid-hls-pragmas]
+#pragma HLS INTERFACE mode=bram bundle=matrix port=matrix
+                                       ^
+2 warnings generated.

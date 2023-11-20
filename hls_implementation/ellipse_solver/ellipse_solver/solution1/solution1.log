@@ -1,0 +1,554 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 10.07 seconds; current allocated memory: 751.051 MB.
+INFO: [HLS 200-10] Analyzing design file 'ellipse_solver.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.11 seconds. CPU system time: 1.1 seconds. Elapsed time: 4.2 seconds; current allocated memory: 751.051 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_36_3' is marked as complete unroll implied by the pipeline pragma (ellipse_solver.cpp:36:19)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_36_3' (ellipse_solver.cpp:36:19) in function 'ellipse_solver' completely with a factor of 8 (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'dataHard': Complete partitioning on dimension 2. (ellipse_solver.cpp:11:13)
+INFO: [HLS 214-248] Applying array_partition to 'outData': Complete partitioning on dimension 1. (ellipse_solver.cpp:14:6)
+INFO: [HLS 214-241] Aggregating maxi variable 'matrix' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'dataPoints' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 32 in loop 'VITIS_LOOP_17_1'(ellipse_solver.cpp:17:19) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:17:19)
+INFO: [HLS 214-115] Multiple burst writes of length 30 and bit width 32 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:74:1)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.66 seconds. CPU system time: 0.8 seconds. Elapsed time: 4.47 seconds; current allocated memory: 752.285 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 752.285 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 755.633 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 758.695 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'ellipse_solver' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'ellipse_solver' (ellipse_solver.cpp:5:19)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 784.816 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V' (ellipse_solver.cpp:19:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.1' (ellipse_solver.cpp:20:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.2' (ellipse_solver.cpp:21:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.3' (ellipse_solver.cpp:22:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.4' (ellipse_solver.cpp:23:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.5' (ellipse_solver.cpp:24:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.6' (ellipse_solver.cpp:25:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.7' (ellipse_solver.cpp:26:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.8' (ellipse_solver.cpp:27:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.9' (ellipse_solver.cpp:28:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.10' (ellipse_solver.cpp:29:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.11' (ellipse_solver.cpp:30:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.12' (ellipse_solver.cpp:31:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 807.582 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ellipse_solver' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.1 seconds; current allocated memory: 809.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 809.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_VITIS_LOOP_17_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_17_1'.
+WARNING: [HLS 200-880] The II Violation in module 'ellipse_solver_Pipeline_VITIS_LOOP_17_1' (loop 'VITIS_LOOP_17_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_1', ellipse_solver.cpp:19) on port 'gmem' (ellipse_solver.cpp:19) and bus read operation ('gmem_addr_read', ellipse_solver.cpp:19) on port 'gmem' (ellipse_solver.cpp:19).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 5, loop 'VITIS_LOOP_17_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 810.156 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 810.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_VITIS_LOOP_34_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_34_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_34_2'
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.06 seconds; current allocated memory: 756.984 MB.
+INFO: [HLS 200-10] Analyzing design file 'ellipse_solver.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.06 seconds. CPU system time: 1.01 seconds. Elapsed time: 4.07 seconds; current allocated memory: 756.984 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'inner_second_loop' is marked as complete unroll implied by the pipeline pragma (ellipse_solver.cpp:36:20)
+INFO: [HLS 214-186] Unrolling loop 'inner_second_loop' (ellipse_solver.cpp:36:20) in function 'ellipse_solver' completely with a factor of 8 (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'dataHard': Complete partitioning on dimension 2. (ellipse_solver.cpp:11:13)
+INFO: [HLS 214-248] Applying array_partition to 'outData': Complete partitioning on dimension 1. (ellipse_solver.cpp:14:6)
+INFO: [HLS 214-241] Aggregating maxi variable 'matrix' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'dataPoints' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 32 in loop 'first_loop'(ellipse_solver.cpp:17:13) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:17:13)
+INFO: [HLS 214-115] Multiple burst writes of length 30 and bit width 32 has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:74:1)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.48 seconds. CPU system time: 0.75 seconds. Elapsed time: 4.24 seconds; current allocated memory: 758.207 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 758.207 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 761.547 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 764.613 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'ellipse_solver' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'ellipse_solver' (ellipse_solver.cpp:5:14)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 790.738 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V' (ellipse_solver.cpp:19:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.1' (ellipse_solver.cpp:20:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.2' (ellipse_solver.cpp:21:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.3' (ellipse_solver.cpp:22:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.4' (ellipse_solver.cpp:23:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.5' (ellipse_solver.cpp:24:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.6' (ellipse_solver.cpp:25:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.7' (ellipse_solver.cpp:26:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.8' (ellipse_solver.cpp:27:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.9' (ellipse_solver.cpp:28:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.10' (ellipse_solver.cpp:29:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.11' (ellipse_solver.cpp:30:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.12' (ellipse_solver.cpp:31:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 804.605 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ellipse_solver' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.11 seconds; current allocated memory: 806.488 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 806.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_first_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'first_loop'.
+WARNING: [HLS 200-880] The II Violation in module 'ellipse_solver_Pipeline_first_loop' (loop 'first_loop'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_addr_read_1', ellipse_solver.cpp:19) on port 'gmem' (ellipse_solver.cpp:19) and bus read operation ('gmem_addr_read', ellipse_solver.cpp:19) on port 'gmem' (ellipse_solver.cpp:19).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 5, loop 'first_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 807.156 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 807.156 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_second_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'second_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'second_loop'
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.05 seconds; current allocated memory: 756.984 MB.
+INFO: [HLS 200-10] Analyzing design file 'ellipse_solver.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.97 seconds. CPU system time: 0.85 seconds. Elapsed time: 3.83 seconds; current allocated memory: 756.984 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'inner_second_loop' is marked as complete unroll implied by the pipeline pragma (ellipse_solver.cpp:36:20)
+INFO: [HLS 214-186] Unrolling loop 'inner_second_loop' (ellipse_solver.cpp:36:20) in function 'ellipse_solver' completely with a factor of 8 (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'dataHard': Complete partitioning on dimension 2. (ellipse_solver.cpp:11:13)
+INFO: [HLS 214-248] Applying array_partition to 'outData': Complete partitioning on dimension 1. (ellipse_solver.cpp:14:6)
+INFO: [HLS 214-241] Aggregating maxi variable 'matrix' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'dataPoints' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 32 in loop 'first_loop'(ellipse_solver.cpp:17:13) has been inferred on bundle 'dataPoints'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:17:13)
+INFO: [HLS 214-115] Multiple burst writes of length 30 and bit width 32 has been inferred on bundle 'matrix'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:74:1)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.45 seconds. CPU system time: 0.65 seconds. Elapsed time: 4.09 seconds; current allocated memory: 758.238 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 758.238 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 761.582 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 764.641 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'ellipse_solver' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'ellipse_solver' (ellipse_solver.cpp:5:14)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 790.801 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V' 
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V' (ellipse_solver.cpp:19:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.1' (ellipse_solver.cpp:20:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.2' (ellipse_solver.cpp:21:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.3' (ellipse_solver.cpp:22:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.4' (ellipse_solver.cpp:23:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.5' (ellipse_solver.cpp:24:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.6' (ellipse_solver.cpp:25:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.7' (ellipse_solver.cpp:26:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.8' (ellipse_solver.cpp:27:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.9' (ellipse_solver.cpp:28:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.10' (ellipse_solver.cpp:29:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.11' (ellipse_solver.cpp:30:19)
+INFO: [HLS 200-472] Inferring partial write operation for 'dataHard.V.12' (ellipse_solver.cpp:31:19)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.1 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 813.582 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ellipse_solver' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.1 seconds; current allocated memory: 815.461 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 815.461 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_first_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'first_loop'.
+WARNING: [HLS 200-880] The II Violation in module 'ellipse_solver_Pipeline_first_loop' (loop 'first_loop'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('dataPoints_addr_read_1', ellipse_solver.cpp:19) on port 'dataPoints' (ellipse_solver.cpp:19) and bus read operation ('dataPoints_addr_read', ellipse_solver.cpp:19) on port 'dataPoints' (ellipse_solver.cpp:19).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 5, loop 'first_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 816.133 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 816.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_second_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'second_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'second_loop'
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.06 seconds; current allocated memory: 756.988 MB.
+INFO: [HLS 200-10] Analyzing design file 'ellipse_solver.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.18 seconds. CPU system time: 0.9 seconds. Elapsed time: 4.09 seconds; current allocated memory: 756.988 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'inner_second_loop' is marked as complete unroll implied by the pipeline pragma (ellipse_solver.cpp:37:20)
+INFO: [HLS 214-186] Unrolling loop 'inner_second_loop' (ellipse_solver.cpp:37:20) in function 'ellipse_solver' completely with a factor of 8 (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'dataHard': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (ellipse_solver.cpp:11:13)
+INFO: [HLS 214-248] Applying array_partition to 'outData': Complete partitioning on dimension 1. (ellipse_solver.cpp:15:6)
+INFO: [HLS 214-241] Aggregating maxi variable 'matrix' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-241] Aggregating maxi variable 'dataPoints' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 16 and bit width 32 in loop 'first_loop'(ellipse_solver.cpp:18:13) has been inferred on bundle 'dataPoints'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:18:13)
+INFO: [HLS 214-115] Multiple burst writes of length 30 and bit width 32 has been inferred on bundle 'matrix'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:75:1)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.68 seconds. CPU system time: 0.76 seconds. Elapsed time: 4.46 seconds; current allocated memory: 758.254 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 758.254 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 762.141 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 765.094 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'ellipse_solver' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'ellipse_solver' (ellipse_solver.cpp:5:14)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 792.070 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.14 seconds; current allocated memory: 816.219 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ellipse_solver' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.16 seconds; current allocated memory: 818.164 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 818.164 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_first_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'first_loop'.
+WARNING: [HLS 200-880] The II Violation in module 'ellipse_solver_Pipeline_first_loop' (loop 'first_loop'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('dataHard.V', ellipse_solver.cpp:20) on port 'dataPoints' (ellipse_solver.cpp:20) and bus read operation ('dataHard.V', ellipse_solver.cpp:20) on port 'dataPoints' (ellipse_solver.cpp:20).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 5, loop 'first_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 821.168 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 821.168 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_second_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'second_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'second_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 823.652 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 823.652 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 825.465 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 10.05 seconds; current allocated memory: 751.051 MB.
+INFO: [HLS 200-10] Analyzing design file 'ellipse_solver.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.36 seconds. CPU system time: 0.84 seconds. Elapsed time: 4.2 seconds; current allocated memory: 751.051 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'inner_second_loop' is marked as complete unroll implied by the pipeline pragma (ellipse_solver.cpp:37:20)
+INFO: [HLS 214-186] Unrolling loop 'inner_second_loop' (ellipse_solver.cpp:37:20) in function 'ellipse_solver' completely with a factor of 8 (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'dataHard': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (ellipse_solver.cpp:11:13)
+INFO: [HLS 214-248] Applying array_partition to 'outData': Complete partitioning on dimension 1. (ellipse_solver.cpp:15:6)
+INFO: [HLS 214-241] Aggregating maxi variable 'matrix' with compact=none mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-115] Multiple burst reads of length 8 and bit width 64 in loop 'first_loop'(ellipse_solver.cpp:18:13) has been inferred on bundle 'dataPoints'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:18:13)
+INFO: [HLS 214-115] Multiple burst writes of length 30 and bit width 32 has been inferred on bundle 'matrix'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (ellipse_solver.cpp:75:1)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.58 seconds. CPU system time: 0.61 seconds. Elapsed time: 4.19 seconds; current allocated memory: 752.301 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 752.301 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 756.500 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 760.285 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'ellipse_solver' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'ellipse_solver' (ellipse_solver.cpp:5:14)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 787.652 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 809.547 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ellipse_solver' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.15 seconds; current allocated memory: 811.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 811.500 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_first_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'first_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'first_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 814.598 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 814.598 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_second_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'second_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'second_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 817.078 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 817.078 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 818.809 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 818.809 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ellipse_solver_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ellipse_solver_Pipeline_1'.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+Tool Version Limit: 2019.12
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu7ev-ffvc1156-2-e 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.05 seconds; current allocated memory: 751.051 MB.
+INFO: [HLS 200-10] Analyzing design file 'ellipse_solver.cpp' ... 
+WARNING: [HLS 207-5554] unexpected pragma parameter 'bundle' (ellipse_solver.cpp:10:40)
+WARNING: [HLS 207-5554] unexpected pragma parameter 'bundle' (ellipse_solver.cpp:11:40)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.91 seconds. CPU system time: 0.87 seconds. Elapsed time: 3.78 seconds; current allocated memory: 751.051 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-291] Loop 'inner_second_loop' is marked as complete unroll implied by the pipeline pragma (ellipse_solver.cpp:39:20)
+INFO: [HLS 214-186] Unrolling loop 'inner_second_loop' (ellipse_solver.cpp:39:20) in function 'ellipse_solver' completely with a factor of 8 (ellipse_solver.cpp:5:0)
+INFO: [HLS 214-248] Applying array_partition to 'dataHard': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (ellipse_solver.cpp:13:13)
+INFO: [HLS 214-248] Applying array_partition to 'outData': Complete partitioning on dimension 1. (ellipse_solver.cpp:17:6)
+INFO: [HLS 214-241] Aggregating bram variable 'matrix' with compact=bit mode in 32-bits (ellipse_solver.cpp:5:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.06 seconds. CPU system time: 0.57 seconds. Elapsed time: 3.64 seconds; current allocated memory: 752.031 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 752.031 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 756.270 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 760.113 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'ellipse_solver' automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'ellipse_solver' (ellipse_solver.cpp:5:14)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 787.555 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 809.184 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ellipse_solver' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.14 seconds; current allocated memory: 811.105 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 811.105 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_first_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'first_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'first_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 814.113 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 814.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver_Pipeline_second_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'second_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'second_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 816.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 816.602 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ellipse_solver' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 818.133 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 818.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ellipse_solver_Pipeline_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ellipse_solver_Pipeline_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 818.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ellipse_solver_Pipeline_first_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ellipse_solver_Pipeline_first_loop' pipeline 'first_loop' pipeline type 'loop pipeline'
